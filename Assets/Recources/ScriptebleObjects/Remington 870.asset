@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Remington 870
   Description: Pump action shotgun
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: ee580e43c93778240a75efec82c13b52, type: 3}
   prefab: {fileID: 7738594843045011394, guid: ec1be4480fd26f843bbb1a6d05652d5b, type: 3}
   magazineSize: 8
   magazineCount: 4
