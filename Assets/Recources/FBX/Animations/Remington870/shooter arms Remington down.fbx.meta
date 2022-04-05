@@ -1,14 +1,20 @@
 fileFormatVersion: 2
-guid: 3f3649b76f2888f4da792ccaff1947fd
+guid: f68e69a666e08e64ab201b47952bc104
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 739174612581842319
-    second: HumanFPS|Knife up
+      74: -4921058455352201685
+    second: 'HumanFPS|Down '
   - first:
-      74: -7215322362976682821
-    second: HumanFPS|KnifeAction
+      74: 5644852872971985192
+    second: HumanFPS|Idle.001
+  - first:
+      74: 6914009853150364123
+    second: Remington 870|Action
+  - first:
+      74: 6441282209079236324
+    second: Remington 870|Idle.001
   externalObjects: {}
   materials:
     materialImportMode: 0
@@ -38,8 +44,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: HumanFPS|Knife up
-      takeName: HumanFPS|Knife up
+      name: 'HumanFPS|Down '
+      takeName: 'HumanFPS|Down '
       internalID: 0
       firstFrame: 0
       lastFrame: 24
