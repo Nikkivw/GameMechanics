@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EquipmentManager : MonoBehaviour
 {
-    private int currentlyEquippedWeapon = 2;
+    public int currentlyEquippedWeapon = 2;
     public GameObject currentWeaponObject = null;
 
     [SerializeField] private Transform WeaponHolderR = null;
