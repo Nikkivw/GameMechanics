@@ -34,6 +34,8 @@ public class WeaponShooting : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
         }
+
+        Instantiate(currentWeapon.MuzzelFlashParticles, manager.currentWeaponBarrel);
     }
 
     private void Shoot()

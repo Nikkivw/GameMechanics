@@ -16,6 +16,7 @@ MonoBehaviour:
   Description: Ak47 FOR EVERY ONE!!!
   Icon: {fileID: 21300000, guid: 28abdc6cee727d14bae9b8d6236eebfb, type: 3}
   prefab: {fileID: 717070411568927804, guid: c4b37980976caee4390295ed4a2f0b67, type: 3}
+  MuzzelFlashParticles: {fileID: 3402133384225369882, guid: c5cd6fd48c34dcc44907bf202c9ec7e1, type: 3}
   magazineSize: 30
   magazineCount: 6
   fireRate: 0.5

@@ -7,6 +7,7 @@ using UnityEngine;
 public class Weapon : Item
 {
     public GameObject prefab;
+    public GameObject MuzzelFlashParticles;
     public int magazineSize;
     public int magazineCount;
     public float fireRate;

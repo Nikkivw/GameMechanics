@@ -16,6 +16,7 @@ MonoBehaviour:
   Description: Just a pistol
   Icon: {fileID: 21300000, guid: cd23de268bf243d4aba5729e6a2d25fc, type: 3}
   prefab: {fileID: 5691349140219036884, guid: cbd71c128f02a524d8a39417a6bc077a, type: 3}
+  MuzzelFlashParticles: {fileID: 5350580022811836151, guid: cfd867218b613b14bb26a85623043135, type: 3}
   magazineSize: 8
   magazineCount: 12
   fireRate: 0.3
