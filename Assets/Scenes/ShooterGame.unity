@@ -1029,7 +1029,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentlyEquippedWeapon: 2
-  currentWeaponObject: {fileID: 0}
+  currentWeaponObject: {fileID: 1953473445}
+  currentWeaponBarrel: {fileID: 0}
   WeaponHolderR: {fileID: 337847388}
   defaultMeleeWeapon: {fileID: 11400000, guid: 9072134e88fdfea439c7b655d510d9e0, type: 2}
 --- !u!114 &1166182416
@@ -1119,6 +1120,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480235277}
   m_CullTransparentMesh: 1
+--- !u!1 &1486755688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 16335c84f026a2d49a1de82f887421d3, type: 3}
+  m_PrefabInstance: {fileID: 2091095608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1486755690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486755688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459101f8a26cf5b429a43fd10c4d32f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1609227031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1307,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867610172}
   m_CullTransparentMesh: 1
+--- !u!1 &1953473445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 657157033866919294, guid: c010eff6b435c3e4bac816994bbf62d9, type: 3}
+  m_PrefabInstance: {fileID: 7326709133466733842}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1980234450
 GameObject:
   m_ObjectHideFlags: 0
