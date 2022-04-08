@@ -18,6 +18,7 @@ MonoBehaviour:
   prefab: {fileID: 717070411568927804, guid: c4b37980976caee4390295ed4a2f0b67, type: 3}
   magazineSize: 30
   magazineCount: 6
+  fireRate: 0.5
   range: 350
   weaponType: 2
   weaponStyle: 1

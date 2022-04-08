@@ -18,6 +18,7 @@ MonoBehaviour:
   prefab: {fileID: 5123663253799166962, guid: 155c1a734dd5e9040820468bb9b5c69d, type: 3}
   magazineSize: 0
   magazineCount: 0
+  fireRate: 1
   range: 3
   weaponType: 0
   weaponStyle: 2
