@@ -8,7 +8,7 @@ public class EquipmentManager : MonoBehaviour
     public GameObject currentWeaponObject = null;
     public Transform currentWeaponBarrel = null;
 
-    [SerializeField] private Transform WeaponHolderR = null;
+    public Transform WeaponHolderR = null;
     private Animator anim;
     private Inventory inventory;
 
