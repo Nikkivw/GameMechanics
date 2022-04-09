@@ -16,8 +16,9 @@ MonoBehaviour:
   Description: ' Very sharp and pointy peace of steal'
   Icon: {fileID: 21300000, guid: 0c7ce0d54017a5a488280fb93ce15064, type: 3}
   prefab: {fileID: 5123663253799166962, guid: 155c1a734dd5e9040820468bb9b5c69d, type: 3}
+  MuzzelFlashParticles: {fileID: 2074822049285838134, guid: 53dbe38b27362d24ba82d558e01a4252, type: 3}
   magazineSize: 0
-  magazineCount: 0
+  storedAmmo: 0
   fireRate: 1
   range: 3
   weaponType: 0

@@ -30,7 +30,7 @@ public class PlayerStats : CharacterStats
         {
             TakeDamage(10);
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Y))
         {
             Heal(20);
         }

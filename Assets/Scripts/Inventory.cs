@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
     //0 = primary, 1 = secondary, 2 = melee
     [SerializeField] private Weapon[] weapons;
 
-    private PlayerHUD hud;
+    private WeaponShooting shooting;
 
     public Weapon testweapon;
     public Weapon testweapon2;
@@ -40,8 +40,7 @@ public class Inventory : MonoBehaviour
         }
         weapons[newItemIndex] = newItem;
 
-        //Update weaponUI
-        hud.UpdateWeaponUI(newItem);
+        shooting.InitAmmo((int)newItem.weaponStyle, newItem);
     }
 
     public void RemoveItem(int index)
@@ -61,6 +60,6 @@ public class Inventory : MonoBehaviour
 
     private void Getreferences()
     {
-        hud = GetComponent<PlayerHUD>();
+        shooting = GetComponent<WeaponShooting>();
     }
 }

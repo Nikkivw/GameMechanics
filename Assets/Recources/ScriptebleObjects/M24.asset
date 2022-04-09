@@ -18,7 +18,7 @@ MonoBehaviour:
   prefab: {fileID: 4838926812556611641, guid: 2bab78a84ac8869439db04f063617957, type: 3}
   MuzzelFlashParticles: {fileID: 1150069714867972124, guid: 30c57ba9dbb8ef347ada4d0fb405cb62, type: 3}
   magazineSize: 6
-  magazineCount: 6
+  storedAmmo: 180
   fireRate: 1.5
   range: 900
   weaponType: 4

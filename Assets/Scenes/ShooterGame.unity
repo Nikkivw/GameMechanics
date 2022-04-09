@@ -1045,6 +1045,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ecf49cfd6b00394cb09a1111700e936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canShoot: 1
+  primaryCurrentAmmo: 0
+  primaryCurrentAmmoStorage: 0
+  secondaryCurrentAmmo: 0
+  secondaryCurrentAmmoStorage: 0
+  primaryMagazineIsEmpty: 0
+  secondaryMagazineIsEmpty: 0
 --- !u!1 &1480235277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,7 +1275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1480235279}
   magazineSizeText: {fileID: 2036869800}
-  magazineCountText: {fileID: 1980234452}
+  storedAmmoText: {fileID: 1980234452}
 --- !u!114 &1867610175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1324,7 +1331,7 @@ GameObject:
   - component: {fileID: 1980234453}
   - component: {fileID: 1980234452}
   m_Layer: 5
-  m_Name: MagazineCountText
+  m_Name: StoredAmmoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
