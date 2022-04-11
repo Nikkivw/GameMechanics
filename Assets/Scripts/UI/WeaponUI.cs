@@ -15,4 +15,10 @@ public class WeaponUI : MonoBehaviour
         magazineSizeText.text = magazineSize.ToString();
         storedAmmoText.text = storedAmmo.ToString();
     }
+
+    public void updateAmmoUI(int magazineSize, int storedAmmo)
+    {
+        magazineSizeText.text = magazineSize.ToString();
+        storedAmmoText.text = storedAmmo.ToString();
+    }
 }

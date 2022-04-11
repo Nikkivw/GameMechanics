@@ -13,7 +13,7 @@ public class EquipmentManager : MonoBehaviour
     private Inventory inventory;
     private PlayerHUD hud;
 
-    [SerializeField] Weapon defaultMeleeWeapon = null;
+    //[SerializeField] Weapon defaultMeleeWeapon = null;
 
     private void Start()
     {

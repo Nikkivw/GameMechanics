@@ -20,6 +20,8 @@ public class WeaponShooting : MonoBehaviour
     private Camera cam;
     private Inventory inventory;
     private EquipmentManager manager;
+    private PlayerHUD hud;
+    private PlayerStats stats;  
 
     private void Start()
     {
@@ -29,14 +31,17 @@ public class WeaponShooting : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (!stats.IsDead())
         {
-            Shoot();
-        }
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                Shoot();
+            }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Reload(manager.currentlyEquippedWeapon);
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Reload(manager.currentlyEquippedWeapon);
+            }
         }
     }
 
@@ -79,35 +84,52 @@ public class WeaponShooting : MonoBehaviour
     private void UseAmmo(int slot, int currentAmmoUsed, int currentStoredAmmoUsed)
     {
         //primary
-        if(slot == 0)
+        if (slot == 0)
         {
-            if (primaryCurrentAmmo <= 0)
+            if(primaryCurrentAmmo <= 0)
             {
                 primaryMagazineIsEmpty = true;
                 CheckCanShoot(manager.currentlyEquippedWeapon);
             }
-
             else
             {
                 primaryCurrentAmmo -= currentAmmoUsed;
                 primaryCurrentAmmoStorage -= currentStoredAmmoUsed;
+                hud.UpdateWeaponAmmoUI(primaryCurrentAmmo, primaryCurrentAmmoStorage);
             }
         }
-        
+
         //secondary
         if (slot == 1)
         {
-            if (secondaryCurrentAmmo <= 0)
-            {
-                secondaryMagazineIsEmpty = true;
-                CheckCanShoot(manager.currentlyEquippedWeapon);
-            }
+            secondaryMagazineIsEmpty = true;
+            CheckCanShoot(manager.currentlyEquippedWeapon);
+        }
+        else
+        {
+            secondaryCurrentAmmo -= currentAmmoUsed;
+            secondaryCurrentAmmoStorage -= currentStoredAmmoUsed;
+            hud.UpdateWeaponAmmoUI(secondaryCurrentAmmo, secondaryCurrentAmmoStorage);
+        }
+    }
 
-            else
-            {
-                secondaryCurrentAmmo -= currentAmmoUsed;
-                secondaryCurrentAmmoStorage -= currentStoredAmmoUsed;
-            }
+    private void AddAmmo(int slot, int currentAmmoAdded, int currentStoredAmmoAdded)
+    {
+        //primary
+        if (slot == 0)
+        {
+            
+            primaryCurrentAmmo += currentAmmoAdded;
+            primaryCurrentAmmoStorage += currentStoredAmmoAdded;
+            hud.UpdateWeaponAmmoUI(primaryCurrentAmmo, primaryCurrentAmmoStorage);
+        }
+
+        //secondary
+        if (slot == 1)
+        {
+            secondaryCurrentAmmo += currentAmmoAdded;
+            secondaryCurrentAmmoStorage += currentStoredAmmoAdded;
+            hud.UpdateWeaponAmmoUI(secondaryCurrentAmmo, secondaryCurrentAmmoStorage);
         }
     }
 
@@ -128,8 +150,8 @@ public class WeaponShooting : MonoBehaviour
                     return;
                 }
 
-                primaryCurrentAmmo += ammoToReload;
-                primaryCurrentAmmoStorage -= ammoToReload;
+                AddAmmo(slot, ammoToReload, 0);
+                UseAmmo(slot, 0, ammoToReload);
 
                 primaryMagazineIsEmpty = false;
                 CheckCanShoot(slot);
@@ -153,8 +175,8 @@ public class WeaponShooting : MonoBehaviour
                     return;
                 }
 
-                secondaryCurrentAmmo += ammoToReload;
-                secondaryCurrentAmmoStorage -= ammoToReload;
+                AddAmmo(slot, ammoToReload, 0);
+                UseAmmo(slot, 0, ammoToReload);
 
                 secondaryMagazineIsEmpty = false;
                 CheckCanShoot(slot);
@@ -207,5 +229,7 @@ public class WeaponShooting : MonoBehaviour
         cam = GetComponentInChildren<Camera>();
         inventory = GetComponentInChildren<Inventory>();
         manager = GetComponent<EquipmentManager>();
+        hud = GetComponent<PlayerHUD>();
+        stats = GetComponent<PlayerStats>();
     }
 }

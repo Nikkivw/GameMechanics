@@ -27,9 +27,14 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    public void Death()
+    public virtual void Death()
     {
         isDead = true;
+    }
+
+    public bool IsDead()
+    {
+        return isDead;
     }
 
     private void SetHealtTo(int healtToSetTo)
