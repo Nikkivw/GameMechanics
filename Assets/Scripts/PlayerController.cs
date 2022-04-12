@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
         InitVariable();
     }
   
-
     private void Update()
     {
         HandleIsGrounded();

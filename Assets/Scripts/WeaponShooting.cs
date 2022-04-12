@@ -26,12 +26,12 @@ public class WeaponShooting : MonoBehaviour
     private void Start()
     {
         GetReferences();
-        canShoot = true;
+        CheckForWeapon();
     }
 
     private void Update()
     {
-        if (!stats.IsDead())
+        if (!stats.IsDead() && inventory == null)
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
@@ -43,6 +43,14 @@ public class WeaponShooting : MonoBehaviour
                 Reload(manager.currentlyEquippedWeapon);
             }
         }
+    }
+
+    private void CheckForWeapon()
+    {
+        if (inventory == null)
+            canShoot = false;
+        else
+            canShoot = true;
     }
 
     private void RaycastShoot(Weapon currentWeapon)

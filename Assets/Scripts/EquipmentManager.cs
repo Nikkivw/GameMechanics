@@ -43,10 +43,13 @@ public class EquipmentManager : MonoBehaviour
 
     private void EquipWeapon(Weapon weapon)
     {
-        currentlyEquippedWeapon = (int)weapon.weaponStyle;
-        anim.SetInteger("weaponType", (int)weapon.weaponType);
-        currentWeaponObject = Instantiate(weapon.prefab, WeaponHolderR);
-        hud.UpdateWeaponUI(weapon);
+        if (weapon == null)
+            return;
+        else 
+            currentlyEquippedWeapon = (int)weapon.weaponStyle;
+            anim.SetInteger("weaponType", (int)weapon.weaponType);
+            currentWeaponObject = Instantiate(weapon.prefab, WeaponHolderR);
+            hud.UpdateWeaponUI(weapon);
     }
 
     private void UnequipWeapon()
